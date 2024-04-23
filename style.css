@@ -1,0 +1,150 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 160px; /* Add padding to top of body to prevent overlap with header */
+}
+
+.content {
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start; /* Aligns items vertically centered */
+    justify-content: space-between; /* Spaces out header items */
+    padding: 0.5em 1em; /* Adjust overall padding of the header */
+    background: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding-left: 1em;
+    position: fixed; /* Makes the header stay at the top */
+    width: 100%; /* Ensures the header spans the entire width */
+    top: 0; /* Aligns the header at the top */
+    left: 0; /* Aligns the header to the left edge */
+    z-index: 1000; /* Ensures the header is above other content */
+    height: 80px;
+    flex-direction: column;
+}
+
+.header h1 {
+    margin-left: 10px;
+}
+
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: column; /* Makes the navigation vertical */
+    align-items: flex-start; /* Aligns items to the left */
+    font-size: 1.1em; /* Increases the font size */
+    padding-left: 0.5em; /* Adds some padding on the left */
+    width: 100%;
+}
+
+.header nav a {
+    margin-bottom: 0.5em; /* Adds space between each link */
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.blog-container {
+    width: 35%; /* Reduced from 50% to 60% to not push it too far right */
+    padding: 1em; /* Reduced padding for more compact posts */
+    margin-left:90px; /* Changed from 1em to auto to center the container */
+    padding-top: 2em; /* Adjust if necessary depending on header height */
+}
+
+
+.blog-post {
+    position: relative;
+    margin-bottom: 4em;
+    padding: 2em;
+    background: #fff;
+    text-align: left;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-top: 0;
+}
+
+.blog-post p {
+    line-height: 1.6;
+}
+
+.archive-link {
+    text-decoration: underline;
+}
+
+/* GENERAL PHONE */
+@media only screen and (max-width: 900px) {
+    .blog-container {
+        width: 80%;
+        padding: 2em;
+    }
+}
+
+/* CONTACT */
+.contact-info, .contact-photo {
+    text-align: left;
+    margin-left:150px; /* Adjust the left margin to 60px, assuming base font size is 16px */
+}
+
+.contact-info p,
+.contact-info a {
+    font-size: 1em;
+    color: #000000; /* Adjust color as needed */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-photo img {
+    max-width: 350px;
+    height: auto;
+}
+
+.contact-photo p {
+    color: #666; /* Adjust color as needed */
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+
+/* CONTACT PHONE */
+@media only screen and (max-width: 900px) {
+    .contact-photo img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+/* ARCHIVE */
+.archive-titles p,
+.archive-titles a {
+    font-size: 1em;
+    color: #333;
+    padding-left: 60px;
+    margin: 2em 1em 3em;
+    text-decoration: none;
+}
